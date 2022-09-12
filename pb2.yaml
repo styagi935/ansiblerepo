@@ -1,0 +1,9 @@
+---
+- name: Tomcat Deployment
+  hosts: tom
+  become: true
+  tasks:
+    -  name: Copy Artifact
+       debug:
+         msg: "welcome to ansible"
+...       
