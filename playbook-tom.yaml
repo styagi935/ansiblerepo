@@ -1,6 +1,6 @@
 ---
 - name: Tomcat Deployment
-  hosts: Tom
+  hosts: tom
   become: true
   tasks:
     -  name: Copy Artifact
