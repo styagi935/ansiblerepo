@@ -1,9 +1,8 @@
 ---
 - name: Tomcat Deployment
-  hosts: tom
+  hosts: all
   become: true
   tasks:
-    -  name: Copy Artifact
-       debug:
-         msg: "welcome to ansible"
+    - name: Ping The host
+      ping:
 ...       
