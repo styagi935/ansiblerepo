@@ -1,7 +1,6 @@
 ---
 - name: Tomcat Deployment
   hosts: all
-  become: true
   tasks:
     - name: Ping The host
       ping:
