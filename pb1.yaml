@@ -5,8 +5,8 @@
   tasks:
     -  name: Copy Artifact
        copy:
-         src: /opt
-         dest: /opt/apache/webapp/
+         src: ./target/studentapp-2.2.war
+         dest: /opt/apache/webapp/studentapp-2.2.war
 
     -  name: Start Catalina
        shell: sh /opt/apache/bin/catalina.sh start
