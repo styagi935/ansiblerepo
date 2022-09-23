@@ -3,7 +3,7 @@
   hosts: tom
   become: true
   vars:
-    URL: " artifact URL "
+    URL_ART: " artifact URL "
   tasks:
     - name: Download Artifact
       get_url:
