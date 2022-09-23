@@ -3,11 +3,11 @@
   hosts: tom
   become: true
   vars:
-    URL_ART: " artifact URL "
+    URL_ART: " Artifact URL "
   tasks:
     - name: Download Artifact
       get_url:
-        url: "{{ URL }}"
+        url: "{{ URL_ART }}"
         dest: ./apache/webapps/
 
     -  name: Start Catalina
