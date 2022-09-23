@@ -2,11 +2,13 @@
 - name: Tomcat Deployment
   hosts: tom
   become: true
+  vars:
+    URL: " artifact URL "
   tasks:
-    -  name: Copy Artifact
-       copy:
-         src: ./target/studentapp-2.2.war
-         dest: /opt/apache/webapp/studentapp-2.2.war
+    - name: Download Artifact
+      get_url:
+        url: "{{ URL }}"
+        dest: ./apache/webapps/
 
     -  name: Start Catalina
        shell: sh /opt/apache/bin/catalina.sh start
