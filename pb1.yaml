@@ -8,8 +8,8 @@
     - name: Download Artifact
       get_url:
         url: "{{ URL_ART }}"
-        dest: ./apache/webapps/
+        dest: ./apache-tomcat-8.5.78/webapps/
 
     -  name: Start Catalina
-       shell: sh /opt/apache/bin/catalina.sh start
+       shell: sh ./apache-tomcat-8.5.78/bin/catalina.sh start
 ...       
