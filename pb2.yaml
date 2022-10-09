@@ -20,7 +20,6 @@
       get_url:
         url: "{{ URL_ART }}"
         dest: ./apache-tomcat-8.5.78/webapps/
-
-    -  name: Start Catalina
-       shell: sh ./apache-tomcat-8.5.78/bin/catalina.sh start
+    - name: Start Catalina
+      shell: sh ./apache-tomcat-8.5.78/bin/catalina.sh start
 ...       
