@@ -1,0 +1,26 @@
+---
+- name: Tomcat Deployment
+  hosts: tom
+  become: true
+  vars:
+    URL_ART: "http://18.231.172.200:8081/repository/mrunalraw/com/jdevs/studentapp/2.2/studentapp-2.2.war"
+    URL_TOM: "https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.78/bin/apache-tomcat-8.5.78.tar.gz"
+    URL_TOMZIP: "{{ TOMCAT_URL.split('/') | last }}"
+  tasks:
+    - name: Download tomcat 8
+      get_url:
+        url: "{{ URL_TOM }}"
+        dest: ./
+    - name: Extract tomcat to /opt
+      unarchive:
+        src: ./{{ URL_TOMZIP }}
+        dest: ./
+        remote_src: true
+    - name: Copy Artifact
+      copy:
+        src: ./studentapp-2.2.war
+        dest: ./apache-tomcat-8.5.78/webapps/
+
+    -  name: Start Catalina
+       shell: sh ./apache-tomcat-8.5.78/bin/catalina.sh start
+...       
