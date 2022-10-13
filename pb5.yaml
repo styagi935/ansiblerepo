@@ -20,7 +20,7 @@
         remote_src: true
     - name: Download Artifact
       copy:
-        src: ./studentapp-2.2-SNAPSHOT.war
+        src: ./studentapp-2.2-20221013.131535-1.war
         dest: ./apache-tomcat-8.5.83/webapps/
     - name: start tomcat
       command: sudo sh apache-tomcat-8.5.83/bin/catalina.sh start
