@@ -19,7 +19,7 @@
     - name: Download Artifact
       copy:
         src: ./*.war
-        dest: /opt/apache-tomcat-8.5.83/webapps/
+        dest: ./apache-tomcat-8.5.83/webapps/
     - name: Start Catalina
       shell: "sh ./apache-tomcat-8.5.83/bin/catalina.sh start"
 ...
