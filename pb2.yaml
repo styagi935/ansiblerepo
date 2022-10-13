@@ -10,11 +10,11 @@
     - name: Download tomcat 8
       get_url:
         url: "{{URL_TOM}}"
-        dest: /opt/
+        dest: ./
     - name: Extract tomcat to /opt
       unarchive:
-        src: /opt/{{ URL_TOMZIP }}
-        dest: /opt/
+        src: ./{{ URL_TOMZIP }}
+        dest: ./
         remote_src: true
     - name: Download Artifact
       copy:
