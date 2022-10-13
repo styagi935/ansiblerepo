@@ -3,7 +3,7 @@
   hosts: all
   become: true
   become_method: sudo
-  become_user: ec2-user
+  become_user: root
   vars:
     URL_ART: "http://18.231.172.200:8081/repository/mrunalraw/com/jdevs/studentapp/2.2/studentapp-2.2.war"
     URL_TOM: "https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.83/bin/apache-tomcat-8.5.83.zip"
@@ -23,5 +23,5 @@
         src: ./studentapp-2.2.war
         dest: ./apache-tomcat-8.5.83/webapps/
     - name: start tomcat
-      command: sudo sh apache-tomcat-8.5.83/bin/catalina.sh start
+      shell: sudo sh apache-tomcat-8.5.83/bin/catalina.sh start
 ...
