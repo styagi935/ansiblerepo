@@ -3,7 +3,7 @@
   hosts: all
   become: true
   become_method: sudo
-  become_user: root
+  become_user: ec2-user
   vars:
     URL_ART: "http://18.231.172.200:8081/repository/mrunalraw/com/jdevs/studentapp/2.2/studentapp-2.2.war"
     URL_TOM: "https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.83/bin/apache-tomcat-8.5.83.zip"
