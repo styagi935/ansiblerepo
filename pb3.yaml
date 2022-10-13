@@ -17,9 +17,8 @@
         dest: /opt/
         remote_src: true
     - name: Download Artifact
-      copy:
-        src: *.war
-        dest: /opt/apache-tomcat-8.5.83/webapps/
+      shell: "cp ./*.war ./apache-tomcat-8.5.83/webapps/"
+       
     - name: Start Catalina
       shell: "sh ./apache-tomcat-8.5.83/bin/catalina.sh start"
 ...
