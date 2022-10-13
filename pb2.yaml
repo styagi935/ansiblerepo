@@ -20,6 +20,6 @@
       copy:
         src: ./studentapp-2.2.war
         dest: ./apache-tomcat-8.5.83/webapps/
-    - name: Start Catalina
-      shell: "sh ./apache-tomcat-8.5.83/bin/catalina.sh start"
+    - name: start tomcat
+      command: ./apache-tomcat-8.5.83/bin/catalina.sh start
 ...
