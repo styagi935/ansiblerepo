@@ -12,6 +12,6 @@
     - name: Download Artifact
       copy:
         src: ./helloworld-0.0.1.war
-        dest: opt/tomcat8/webapps/
+        dest: /opt/tomcat8/webapps/
     - name: start tomcat
       shell: sh /opt/tomcat8/bin/startup.sh start
