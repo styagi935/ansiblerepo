@@ -5,7 +5,7 @@
   become_method: sudo
   become_user: root
   vars:
-    URL_ART: "http://18.231.172.200:8081/repository/mrunalraw/com/jdevs/studentapp/2.2/studentapp-2.2.war"
+    URL_ART: "http://3.109.5.157:8081/repository/my-artifacts/com/springhow/example/helloworld/0.0.1/helloworld-0.0.1.war"
     URL_TOM: "https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.83/bin/apache-tomcat-8.5.83.zip"
     URL_TOMZIP: "{{ URL_TOM.split('/') | last }}"
   tasks:
@@ -20,8 +20,7 @@
         remote_src: true
     - name: Download Artifact
       copy:
-        src: ./studentapp-2.2.war
+        src: ./helloworld-0.0.1.war
         dest: ./apache-tomcat-8.5.83/webapps/
     - name: start tomcat
-      command: sudo sh apache-tomcat-8.5.83/bin/catalina.sh start
-...
+      shell: sh apache-tomcat-8.5.83/bin/catalina.sh start
