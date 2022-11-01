@@ -11,7 +11,7 @@
   tasks:
     - name: Download Artifact
       copy:
-        src: ./simple-app-6.0.0.war
+        src: ./simple-app-7.0.0.war
         dest: /opt/tomcat8/webapps/
     - name: start tomcat
       shell: sh /opt/tomcat8/bin/startup.sh start
